@@ -1,7 +1,7 @@
 # Imagen basada en Debian Bookworm
-FROM rockylinux/rockylinux:9.4
+FROM rockylinux/rockylinux:10
 
-ENV TOMCAT_VERSION=10.1.31
+ENV TOMCAT_VERSION=10.1.49
 
 RUN dnf -y update
 

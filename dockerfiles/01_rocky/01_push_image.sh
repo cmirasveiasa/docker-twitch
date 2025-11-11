@@ -1,6 +1,6 @@
 #!/bin/bash
 # definir el usuario de dockerhub
-DOCKER_HUB_USER=pepesan
+DOCKER_HUB_USER=cmiras
 # Definir el nombre de la imagen o repositorio
 DOCKER_HUB_REPOSITORY=rocky
 # Antes de hacer el push hay que hacer el login
@@ -13,6 +13,6 @@ docker login -u $DOCKER_HUB_USER
 ## tag: usuario/nombre_imagen:tag
 docker push $DOCKER_HUB_USER/$DOCKER_HUB_REPOSITORY:latest
 ## define otro tag con la fecha actual
-docker push $DOCKER_HUB_USER/$DOCKER_HUB_REPOSITORY:20250708
+docker push $DOCKER_HUB_USER/$DOCKER_HUB_REPOSITORY:20251111
 ## define otro tag con la versión de nuestro software
-docker push $DOCKER_HUB_USER/$DOCKER_HUB_REPOSITORY:9.5
+docker push $DOCKER_HUB_USER/$DOCKER_HUB_REPOSITORY:10

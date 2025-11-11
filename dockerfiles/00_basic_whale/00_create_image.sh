@@ -1,6 +1,6 @@
 #!/bin/bash
 # definir el usuario de dockerhub
-DOCKER_HUB_USER=pepesan
+DOCKER_HUB_USER=cmiras
 # construir la imagen en base al Dockerfile
 ## build es el comando principal
 ## -t define el tag asociado a la imagen
@@ -9,6 +9,6 @@ DOCKER_HUB_USER=pepesan
 ## . pilla el Dockerfile que hay en el directorio actual
 docker build -t $DOCKER_HUB_USER/docker-whale:latest .
 ## define otro tag con la fecha actual
-docker build -t $DOCKER_HUB_USER/docker-whale:20250708 .
+docker build -t $DOCKER_HUB_USER/docker-whale:20251111 .
 ## define otro tag con la versión de nuestro software
-docker build -t $DOCKER_HUB_USER/docker-whale:1.4.0 .
+docker build -t $DOCKER_HUB_USER/docker-whale:1.5.0 .

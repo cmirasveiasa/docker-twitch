@@ -1,12 +1,12 @@
 # Imagen basada en Debian Bookworm
-FROM debian:bookworm
+FROM debian:trixie
 
-ENV TOMCAT_VERSION=10.1.43
+ENV TOMCAT_VERSION=10.1.49
 
 RUN apt update && \
     apt upgrade -y
 
-RUN apt install -y openjdk-17-jdk curl && \
+RUN apt install -y openjdk-21-jdk curl && \
     apt clean
 
 RUN mkdir -p /deploy

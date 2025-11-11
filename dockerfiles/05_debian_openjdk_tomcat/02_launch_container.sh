@@ -1,10 +1,10 @@
 #!/bin/bash
 # definir el usuario de dockerhub
-DOCKER_HUB_USER=pepesan
+DOCKER_HUB_USER=cmiras
 # Definir el nombre de la imagen o repositorio
 DOCKER_HUB_REPOSITORY=tomcat
 # Definir la versión del Tag
-DOCKER_HUB_TAG=10.1.43-jdk17
+DOCKER_HUB_TAG=10.1.49-jdk21
 # crear el contenedor en base la imagen al Docker hub
 ## push es el comando principal
 ## tag: usuario/repositorio:tag
@@ -13,7 +13,7 @@ DOCKER_HUB_TAG=10.1.43-jdk17
 ## -p redirecciona el puerto 8080 del host al 8080 de contenedor
 ## -v el directorio del host ./webapps se asocia al /deploy/tomcat/webapps del contenedor
 docker run -d \
- -p 8080:8080 \
+ -p 8083:8080 \
  -v ./webapps:/deploy/tomcat/webapps \
  --name tomcat \
  $DOCKER_HUB_USER/$DOCKER_HUB_REPOSITORY:$DOCKER_HUB_TAG
