@@ -1,10 +1,10 @@
 #!/bin/bash
 # definir el usuario de dockerhub
-DOCKER_HUB_USER=pepesan
+DOCKER_HUB_USER=cmiras
 # Definir el nombre de la imagen o repositorio
 DOCKER_HUB_REPOSITORY=app-python
 # Definir la versión del Tag
-DOCKER_HUB_TAG=1.0.1-3.12
+DOCKER_HUB_TAG=1.1.1-3.12
 # crear el contenedor en base la imagen al Docker hub
 ## push es el comando principal
 ## tag: usuario/repositorio:tag
