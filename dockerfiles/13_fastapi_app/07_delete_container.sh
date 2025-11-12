@@ -1,5 +1,5 @@
 #!/bin/bash
 
-docker container rm app-python-uv
+docker container rm app-python-fastapi
 
-docker ps -a | grep app-python-uv
+docker ps -a | grep app-python-fastapi

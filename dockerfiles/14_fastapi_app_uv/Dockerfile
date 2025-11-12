@@ -2,7 +2,7 @@
 FROM ghcr.io/astral-sh/uv:latest AS uvx
 
 # Etapa 2: imagen de runtime en Rocky Linux
-FROM rockylinux/rockylinux:9.5
+FROM rockylinux/rockylinux:10
 
 # (Opcional) Instalar CA root si la necesitas para HTTPS
 RUN dnf install -y ca-certificates && \
@@ -12,6 +12,9 @@ RUN dnf install -y ca-certificates && \
 COPY --from=uvx /uv /uvx /bin/
 
 # Ajustar PATH y preferencias (usa sólo Python gestionado por uv)
+# Forzar Python con wheels disponibles
+ENV UV_PYTHON=3.12
+ENV UV_PROJECT_ENVIRONMENT=".venv"
 ENV UV_PYTHON_PREFERENCE="only-managed"
 ENV PATH="/root/.local/bin:/bin:${PATH}"
 

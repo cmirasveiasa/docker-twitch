@@ -1,10 +1,10 @@
 #!/bin/bash
 # definir el usuario de dockerhub
-DOCKER_HUB_USER=pepesan
+DOCKER_HUB_USER=cmiras
 # Definir el nombre de la imagen o repositorio
 DOCKER_HUB_REPOSITORY=fastapi-uv
 # Definir la versión del Tag
-DOCKER_HUB_TAG=1.0.7-3.12
+DOCKER_HUB_TAG=1.1.8-3.12
 # Antes de hacer el push hay que hacer el login
 # el docker hub
 ## pedirá usuario y contraseña
